@@ -1,0 +1,50 @@
+########################################################################
+# requirements.txt — Projet Smart Grid / Clustering de courbes de charge
+# London Smart Meters (Kaggle) — M1 Data Science & IA, ISI Dakar
+#
+# Installation :
+#   python -m venv venv
+#   source venv/bin/activate   (ou venv\Scripts\activate sous Windows)
+#   pip install -r requirements.txt
+########################################################################
+
+# --- Environnement notebook ---
+jupyter
+
+# --- Manipulation de données ---
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==17.0.0          # lecture/écriture rapide parquet, utile pour les gros fichiers halfhourly
+openpyxl==3.1.5          # export/lecture Excel si besoin
+
+# --- Visualisation ---
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.24.1           # graphiques interactifs (courbes de charge, ACP 3D...)
+
+# --- Machine learning classique (K-means, GMM, DBSCAN, CAH, ACP, silhouette, Davies-Bouldin, ARI) ---
+scikit-learn==1.5.2
+
+# --- Clustering de séries temporelles (DTW, TimeSeriesKMeans, k-shape) ---
+tslearn==0.6.3
+dtaidistance==2.3.12     # calcul DTW rapide/optimisé, alternative/complément à tslearn
+
+# --- Statistiques (test du χ², corrélations, etc.) ---
+scipy==1.14.1
+statsmodels==0.14.4
+
+# --- Visualisation de valeurs manquantes ---
+missingno==0.5.2
+
+# --- Dendrogrammes / CAH avancée (optionnel, en plus de scipy.cluster.hierarchy) ---
+fastcluster==1.2.6
+
+# --- Barres de progression (utile pour boucler sur 5 567 foyers) ---
+tqdm==4.66.5
+
+# --- Gestion de dates / calendrier (jours fériés UK, jours de semaine) ---
+python-dateutil==2.9.0
+holidays==0.57
+
+# --- Récupération des données Kaggle en ligne de commande (optionnel) ---
+kaggle==1.6.17
