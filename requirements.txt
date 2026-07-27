@@ -9,7 +9,7 @@
 ########################################################################
 
 # --- Environnement notebook ---
-jupyter
+#jupyter
 
 # --- Manipulation de données ---
 numpy==1.26.4
